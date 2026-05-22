@@ -1,6 +1,9 @@
+import datetime
+
 from sqlalchemy import String, ForeignKey, Text
+from sqlalchemy.orm import Mapped
 from sqlalchemy.testing.schema import mapped_column
-from src.database import Base
+from app.database import Base
 
 class PaymnetBase(Base):
     __tablename__ = "payment"

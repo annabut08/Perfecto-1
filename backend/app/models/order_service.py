@@ -2,14 +2,14 @@ import datetime
 
 from sqlalchemy import String, Numeric, text, ForeignKey
 from sqlalchemy.testing.schema import mapped_column
-# from src.database import Base
+# from app.database import Base
 #
 # class OrderServiceBase(Base):
 from sqlalchemy import String
 from sqlalchemy.testing.schema import mapped_column
 from src.database import Base
 
-class OrderServiceBase(Base):
+class OrderService(Base):
     __tablename__ = "order_service"
 
     order_id: Mapped[int] = mapped_column(

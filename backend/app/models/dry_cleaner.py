@@ -1,11 +1,14 @@
+from decimal import Decimal
+from typing import Optional
+
 from sqlalchemy import String, Numeric
-from sqlalchemy.testing.schema import mapped_column
-from src.database import Base
+from sqlalchemy.orm import Mapped, mapped_column
+from app.database import Base
 
-class DryCleanerBase(Base):
-    __tablename__ = "drycleaner"
+class DryCleaner(Base):
+    __tablename__ = "dry_cleaner"
 
-    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    dry_cleaner_id: Mapped[int] = mapped_column(primary_key=True, index=True)
     city: Mapped[str] = mapped_column(String(50))
     street: Mapped[str] = mapped_column(String(50))
     house_number: Mapped[Optional[str]] = mapped_column(String(50))
